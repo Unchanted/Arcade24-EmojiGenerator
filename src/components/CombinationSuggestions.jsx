@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const fruits = ['🍎', '🍌', '🍇', '🍉', '🍒', '🍍', '🍑', '🍓', '🥭', '🥝'];
@@ -13,11 +12,11 @@ const CombinationSuggestions = () => {
   const combinations = Array.from({ length: 5 }, () => getRandomCombination());
 
   return (
-    <div>
-      <h2>Ridiculous Combinations</h2>
-      <ul>
+    <div className="mt-8">
+      <h2 className="text-2xl font-bold mb-4">Ridiculous Combinations</h2>
+      <ul className="list-disc">
         {combinations.map((combo, index) => (
-          <li key={index}>{combo}</li>
+          <li key={index} className="text-xl">{combo}</li>
         ))}
       </ul>
     </div>
